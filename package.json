@@ -1,0 +1,29 @@
+{
+  "name": "smart-wallet-copilot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Smart Wallet Copilot - A reactive wallet assistant for Somnia blockchain",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
+    "test:e2e": "turbo run test:e2e",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "extension:build": "npm run build --workspace=@swc/background && npm run build --workspace=@swc/ui",
+    "extension:dev": "npm run dev --workspace=@swc/ui",
+    "install:all": "npm install --workspaces"
+  },
+  "devDependencies": {
+    "turbo": "^1.11.2",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.10.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
