@@ -1,0 +1,26 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "composite": true
+  },
+  "references": [
+    {
+      "path": "../shared"
+    },
+    {
+      "path": "../sdk"
+    },
+    {
+      "path": "../policy-engine"
+    },
+    {
+      "path": "../categorizer"
+    },
+    {
+      "path": "../gas-predictor"
+    }
+  ],
+  "include": ["src/**/*"]
+}

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --swc-primary: #6366F1;
+  --swc-critical: #DC2626;
+  --swc-transition: 200ms ease-out;
+  --swc-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --swc-radius: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 380px;
+  min-height: 600px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.alert-modal {
+  animation: slide-down 0.2s ease-out;
+}
+
+.gas-badge {
+  animation: slide-up 0.3s ease-out;
+}
+
+.notification-toast {
+  animation: slide-up 0.3s ease-out;
+}
