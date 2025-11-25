@@ -1,0 +1,19 @@
+{
+  "name": "smart-wallet-copilot-contracts",
+  "version": "0.1.0",
+  "description": "Test contracts for Smart Wallet Copilot extension",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
+    "node": "hardhat node"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.1",
+    "@openzeppelin/contracts-upgradeable": "^5.0.1",
+    "@types/node": "^20.10.6",
+    "hardhat": "^2.19.4",
+    "typescript": "^5.3.3"
+  }
+}

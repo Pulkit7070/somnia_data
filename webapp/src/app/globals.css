@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-dark-border;
+  }
+  
+  body {
+    @apply bg-dark-bg text-text-primary antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0D1117;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #30363D;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #484F58;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-primary text-white font-medium rounded-md 
+           hover:bg-blue-hover transition-colors duration-150 
+           focus:outline-none focus:ring-2 focus:ring-blue-primary focus:ring-offset-2 focus:ring-offset-dark-bg;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-dark-surface text-text-primary font-medium rounded-md border border-dark-border
+           hover:bg-dark-hover transition-colors duration-150;
+  }
+
+  .card {
+    @apply bg-dark-surface rounded-lg border border-dark-border p-6;
+  }
+
+  .input-field {
+    @apply w-full px-3 py-2 bg-dark-bg text-text-primary rounded-md
+           border border-dark-border 
+           focus:border-blue-primary focus:ring-1 focus:ring-blue-primary
+           focus:outline-none transition-colors duration-150
+           placeholder:text-text-tertiary;
+  }
+
+  .status-dot {
+    @apply w-2 h-2 rounded-full;
+  }
+
+  .status-online {
+    @apply bg-status-success;
+  }
+
+  .status-offline {
+    @apply bg-text-tertiary;
+  }
+}
